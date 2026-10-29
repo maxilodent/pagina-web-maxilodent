@@ -24,3 +24,8 @@ fuentes: ["AGENTS.md", "wiki/"]
 - Se inicializó Git en rama `main` y se estableció identidad local `Maxilodent <maxilodent@gmail.com>`. Se revisaron los archivos preparados: 41 archivos de código, activos web seleccionados y wiki; `Docs/`, `.aistudio/`, `node_modules/` y `dist/` quedaron ignorados. Se pidió permiso de sandbox para escribir el índice `.git`; staging local completado.
 - Instalación de npm completada tras ajustar `esbuild`; `npm run build` y `npm run lint` pasaron. El servidor quedó activo en localhost. La revisión visual del navegador fue detenida por el control de seguridad de URL.
 - Primer commit local creado en `main` con 41 archivos de proyecto, sin originales de `Docs/` ni temporales. Identidad local: `Maxilodent <maxilodent@gmail.com>`. Pendiente conectar GitHub para crear el remoto privado y publicar.
+
+## [2026-10-29] publicación | remoto indicado por el usuario
+- El usuario indicó `https://github.com/maxilodent/pagina-web-maxilodent.git` y autorizó subir allí el trabajo actual.
+- `git ls-remote` comprobó que el remoto está vacío. Se configuró `origin` con esa URL.
+- `git push -u origin main` no se completó: no hay sesión autenticada, Git no pudo abrir un diálogo de inicio de sesión y la integración de GitHub aparece desconectada. Ningún commit fue publicado.
