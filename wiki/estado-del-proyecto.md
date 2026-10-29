@@ -13,9 +13,9 @@ fuentes: ["package.json", "README.md", "src/", "Docs/"]
 - **Confirmado por inventario:** `Docs/` ya existe; contiene tres imágenes y un video. No se encontró ZIP en la carpeta. La app de Google AI Studio figura en `README.md`.
 - **Dependencias:** primera instalación detectó conflicto entre `vite@8` y `esbuild@0.25`. Se ajustó la dependencia directa a `^0.28.0`; `npm install` terminó correctamente y reportó cero vulnerabilidades.
 - **Comprobaciones:** `npm run build` y `npm run lint` pasaron. `npm run dev` está activo en `http://127.0.0.1:3000/`. La compilación muestra una advertencia de Vite sobre `__dirname` en `vite.config.ts`; no impidió compilar.
-- **Git:** repositorio local en rama `main`, identidad de este repositorio `Maxilodent <maxilodent@gmail.com>`. Hay dos commits locales y `origin` apunta a `https://github.com/maxilodent/pagina-web-maxilodent.git`. Se comprobó que el remoto no tiene ramas/commits aún. El envío no se completó porque no hay sesión de GitHub autenticada disponible en este equipo.
+- **Git:** repositorio local en rama `main`, identidad de este repositorio `Maxilodent <maxilodent@gmail.com>`. `main` está publicada en `https://github.com/maxilodent/pagina-web-maxilodent` y sigue `origin/main`.
 - **Vista previa:** servidor activo. La revisión visual automatizada no se completó porque el control del navegador no pudo verificar la URL.
-- **Publicación:** no completada. No se subió ningún commit al remoto.
+- **Publicación del código:** `main` subida a GitHub. Esto confirma el repositorio remoto, no que exista una web pública desplegada.
 
 ## Flujo visible
 La landing ofrece una selección entre odontólogos y pacientes, servicios, acceso a un portal externo, formulario de orden que abre WhatsApp y un botón flotante de WhatsApp. La ruta exacta de orden aún requiere prueba funcional; no se envió ningún mensaje.

@@ -9,10 +9,8 @@ fuentes: ["README.md", "src/", "Docs/"]
 # Pendientes
 
 ## Bloqueos para vista previa
-- No hay `node_modules/` ni archivo de bloqueo, por lo que no se han ejecutado la compilación, lint ni el servidor. Siguiente paso: instalar dependencias según una decisión de gestor; `package.json` declara scripts npm. No se instaló nada.
-- No hay navegador abierto ni vista previa revisada.
+- `npm install`, `npm run build` y `npm run lint` se completaron. El servidor local está activo; falta revisión visual porque el control del navegador no pudo verificar la URL.
 - No hay ZIP original en esta carpeta. Si se requiere conservar y comparar la entrega de AI Studio, depositarlo aquí; no hace falta para editar el código actual.
-- Conectar GitHub o iniciar sesión en Git Credential Manager en este equipo. `origin` ya apunta al repositorio que indicó el usuario y se confirmó que está vacío. Luego reintentar `git push -u origin main`. El intento actual falló porque Git no encontró sesión y no pudo abrir un diálogo de autenticación. La identidad de Git está configurada solo en este repositorio; no cambiar configuración global.
 
 ## Validación de negocio y publicación
 - Confirmar qué servicios están vigentes y sus tiempos/especificaciones antes de editar el texto comercial.

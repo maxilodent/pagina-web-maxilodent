@@ -29,3 +29,4 @@ fuentes: ["AGENTS.md", "wiki/"]
 - El usuario indicó `https://github.com/maxilodent/pagina-web-maxilodent.git` y autorizó subir allí el trabajo actual.
 - `git ls-remote` comprobó que el remoto está vacío. Se configuró `origin` con esa URL.
 - `git push -u origin main` no se completó: no hay sesión autenticada, Git no pudo abrir un diálogo de inicio de sesión y la integración de GitHub aparece desconectada. Ningún commit fue publicado.
+- Con autorización del usuario para hacerlo desde comandos, se completó Git Credential Manager para la cuenta `maxilodent`; `git push -u origin main` subió la rama y configuró `origin/main` como upstream. El código ya está en GitHub; no se comprobó despliegue público del sitio.
