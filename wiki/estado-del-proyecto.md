@@ -13,7 +13,7 @@ fuentes: ["package.json", "README.md", "src/", "Docs/"]
 - **Confirmado por inventario:** `Docs/` ya existe; contiene tres imágenes y un video. No se encontró ZIP en la carpeta. La app de Google AI Studio figura en `README.md`.
 - **Dependencias:** primera instalación detectó conflicto entre `vite@8` y `esbuild@0.25`. Se ajustó la dependencia directa a `^0.28.0`; `npm install` terminó correctamente y reportó cero vulnerabilidades.
 - **Comprobaciones:** `npm run build` y `npm run lint` pasaron. `npm run dev` está activo en `http://127.0.0.1:3000/`. La compilación muestra una advertencia de Vite sobre `__dirname` en `vite.config.ts`; no impidió compilar.
-- **Git:** repositorio local en rama `main`, identidad de este repositorio `Maxilodent <maxilodent@gmail.com>`. Los archivos de la primera versión están preparados; no se ha creado el commit todavía. El remoto `maxilodent-landing` requiere acceso confirmado a la cuenta GitHub.
+- **Git:** repositorio local en rama `main`, identidad de este repositorio `Maxilodent <maxilodent@gmail.com>`. Primer commit local creado con el código, configuración y wiki. El remoto `maxilodent-landing` aún no existe; para crearlo y publicar el código falta el acceso confirmado a la cuenta GitHub.
 - **Vista previa:** servidor activo. La revisión visual automatizada no se completó porque el control del navegador no pudo verificar la URL.
 - **Publicación:** desconocida y no comprobada. La copia local no acredita publicación.
 

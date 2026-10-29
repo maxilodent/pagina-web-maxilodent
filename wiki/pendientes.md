@@ -12,7 +12,7 @@ fuentes: ["README.md", "src/", "Docs/"]
 - No hay `node_modules/` ni archivo de bloqueo, por lo que no se han ejecutado la compilación, lint ni el servidor. Siguiente paso: instalar dependencias según una decisión de gestor; `package.json` declara scripts npm. No se instaló nada.
 - No hay navegador abierto ni vista previa revisada.
 - No hay ZIP original en esta carpeta. Si se requiere conservar y comparar la entrega de AI Studio, depositarlo aquí; no hace falta para editar el código actual.
-- Completar el primer commit local y confirmar el acceso de GitHub para `maxilodent`; tras la conexión se podrá crear el remoto privado `maxilodent-landing` y subir el commit revisado. La identidad de Git está configurada solo en este repositorio con los datos aportados; no cambiar configuración global.
+- Confirmar el acceso de GitHub para `maxilodent`; tras la conexión se podrá crear el remoto privado `maxilodent-landing` y subir el commit revisado. La identidad de Git está configurada solo en este repositorio con los datos aportados; no cambiar configuración global.
 
 ## Validación de negocio y publicación
 - Confirmar qué servicios están vigentes y sus tiempos/especificaciones antes de editar el texto comercial.
