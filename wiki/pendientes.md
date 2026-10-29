@@ -13,6 +13,7 @@ fuentes: ["README.md", "src/", "Docs/"]
 - No hay ZIP original en esta carpeta. Si se requiere conservar y comparar la entrega de AI Studio, depositarlo aquí; no hace falta para editar el código actual.
 
 ## Validación de negocio y publicación
+- Publicación inicial en curso mediante `.github/workflows/deploy-pages.yml`. Falta confirmar que GitHub Pages y Actions terminen correctamente y que la página responda en su URL pública.
 - Confirmar qué servicios están vigentes y sus tiempos/especificaciones antes de editar el texto comercial.
 - Validar o autorizar testimonios y nombres, certificaciones, licencia/resolución, años de trayectoria, entrega en 24 horas, equipo OP300 y demás afirmaciones.
 - Confirmar datos de contacto, dirección, horarios y enlaces de perfiles. Los enlaces sociales actuales son genéricos.

@@ -13,7 +13,7 @@ export const TechnologySection: React.FC = () => {
                 <img
                   className="w-full h-[400px] sm:h-[480px] object-cover object-top"
                   alt="Especialista radióloga evaluando reconstrucción tomográfica 3D en pantalla y dispositivo móvil en Maxilodent Valledupar"
-                  src="/assets/aistudio/PHOTO-2026-06-24-19-32-28_47f176f3.jpg"
+                  src={`${import.meta.env.BASE_URL}assets/aistudio/PHOTO-2026-06-24-19-32-28_47f176f3.jpg`}
                 />
                 <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border border-[#E4ECEC] text-[#188C8E] text-xs font-bold flex items-center gap-2 shadow-xs">
                   <span className="w-2 h-2 rounded-full bg-[#CA5B30]" />

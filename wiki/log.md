@@ -30,3 +30,10 @@ fuentes: ["AGENTS.md", "wiki/"]
 - `git ls-remote` comprobó que el remoto está vacío. Se configuró `origin` con esa URL.
 - `git push -u origin main` no se completó: no hay sesión autenticada, Git no pudo abrir un diálogo de inicio de sesión y la integración de GitHub aparece desconectada. Ningún commit fue publicado.
 - Con autorización del usuario para hacerlo desde comandos, se completó Git Credential Manager para la cuenta `maxilodent`; `git push -u origin main` subió la rama y configuró `origin/main` como upstream. El código ya está en GitHub; no se comprobó despliegue público del sitio.
+
+## [2026-10-29] despliegue | revisión previa de privacidad
+- El usuario indicó “sube”; se interpretó por el contexto como publicar la landing en internet.
+- Se preparó un workflow de GitHub Pages y se adaptaron las rutas de imágenes al subdirectorio del repositorio. Las pruebas locales en modo Pages (`npm run build` con `GITHUB_ACTIONS=true`) y `npm run lint` pasaron.
+- Se confirmó que el repositorio es público y que Pages no está habilitado. La revisión del portal de demostración encontró nombres, identificadores y descripciones de salud sin confirmación de que sean ficticios; algunos ya están en el historial remoto.
+- No se activó Pages ni se subió el nuevo workflow. Publicación pendiente de resolver esos datos sensibles aparentes y el historial remoto.
+- El usuario confirmó que los datos del portal son ficticios y autorizó publicarlos. Se aclaró la etiqueta de demostración en el modal, se concedió solo `pages: read` al job de compilación y se continuó la preparación para Pages.

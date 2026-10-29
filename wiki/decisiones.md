@@ -27,3 +27,8 @@ fuentes: ["AGENTS.md", "package.json", "Docs/"]
 - **Decisión:** actualizar la versión declarada de `esbuild` de `^0.25.0` a `^0.28.0`.
 - **Motivo:** `npm install` reportó que Vite 8 requiere el peer opcional `esbuild@^0.27.0 || ^0.28.0`; la versión anterior impedía resolver dependencias.
 - **Fuente:** salida de `npm install` y `package.json`.
+
+## 2026-10-29 — Publicar landing en GitHub Pages
+- **Decisión:** usar GitHub Actions para compilar React/Vite y desplegar la landing en Pages bajo `/pagina-web-maxilodent/`.
+- **Motivo:** el usuario indicó “sube” después de distinguir el repositorio del sitio publicado. El repositorio es público y el usuario confirmó que los registros del portal son ficticios y autorizó publicarlos.
+- **Fuente:** instrucción del usuario, `vite.config.ts`, `.github/workflows/deploy-pages.yml` y guía oficial de GitHub Pages.

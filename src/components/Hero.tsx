@@ -86,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({
               <img
                 className="w-full h-[400px] sm:h-[460px] object-cover object-center"
                 alt="Toma tomográfica y radiológica con paciente en Maxilodent Valledupar"
-                src="/assets/aistudio/2_034ad018.jpeg"
+                src={`${import.meta.env.BASE_URL}assets/aistudio/2_034ad018.jpeg`}
               />
               
               {/* Radiologist Verification Chip */}

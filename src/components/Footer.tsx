@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPortal }) => {
               <img
                 alt="Logo Maxilodent"
                 className="h-12 w-auto object-contain"
-                src="/assets/aistudio/logo__2__eb17db82.png"
+                src={`${import.meta.env.BASE_URL}assets/aistudio/logo__2__eb17db82.png`}
               />
             </div>
 
@@ -112,7 +112,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPortal }) => {
               <img
                 className="w-full h-48 sm:h-52 object-cover object-center filter brightness-95 group-hover:scale-105 transition-transform duration-300"
                 alt="Recepción y sala de espera oficial de Maxilodent en Valledupar"
-                src="/assets/aistudio/1_e64dfff7.jpeg"
+                src={`${import.meta.env.BASE_URL}assets/aistudio/1_e64dfff7.jpeg`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#243638]/90 via-transparent to-transparent flex items-end p-3">
                 <span className="text-xs text-white font-medium flex items-center gap-1.5">

@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <div className="flex items-center justify-center shrink-0 transition-transform group-hover:scale-[1.02]">
               <img
-                src="/assets/aistudio/logo__2__eb17db82.png"
+                src={`${import.meta.env.BASE_URL}assets/aistudio/logo__2__eb17db82.png`}
                 alt="Maxilodent - Imágenes dentales con calidad"
                 className="h-10 sm:h-12 w-auto object-contain"
               />

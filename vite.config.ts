@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages serves this repository below /pagina-web-maxilodent/.
+    // Keep the root path for local development and previews.
+    base: process.env.GITHUB_ACTIONS === 'true' ? '/pagina-web-maxilodent/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

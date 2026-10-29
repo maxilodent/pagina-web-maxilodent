@@ -64,11 +64,14 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
                   Portal Mis Radiografías
                 </h2>
                 <span className="px-2 py-0.5 rounded-full bg-[#84BAB9]/20 border border-[#84BAB9]/40 text-[#126F72] text-[11px] font-bold">
-                  Acceso Seguro SSL
+                  Demostración
                 </span>
               </div>
               <p className="text-xs text-[#5A7173]">
                 Visualizador DICOM web y entrega de estudios radiográficos • Maxilodent Valledupar
+              </p>
+              <p className="text-[11px] text-[#CA5B30] font-semibold mt-1">
+                Datos ficticios de demostración; no corresponden a pacientes reales.
               </p>
             </div>
           </div>
@@ -488,7 +491,7 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
                   <div className="flex items-center justify-between border-b border-[#E4ECEC] pb-4 mb-6">
                     <div className="flex items-center gap-3">
                       <img
-                        src="/assets/aistudio/logo__2__eb17db82.png"
+                        src={`${import.meta.env.BASE_URL}assets/aistudio/logo__2__eb17db82.png`}
                         alt="Maxilodent"
                         className="h-10 w-auto object-contain"
                       />
