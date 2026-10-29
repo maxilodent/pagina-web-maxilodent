@@ -1,0 +1,6 @@
+{
+  "name": "Maxilodent - Diagnóstico Maxilofacial Valledupar",
+  "description": "Tomografía Computarizada Cone Beam 3D en 24 horas y radiología oral digital en Valledupar. Portal para odontólogos y pacientes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
