@@ -15,13 +15,14 @@ fuentes: ["package.json", "README.md", "src/", "Docs/"]
 - **Comprobaciones:** `npm run build` y `npm run lint` pasaron. `npm run dev` está activo en `http://127.0.0.1:3000/`. La compilación muestra una advertencia de Vite sobre `__dirname` en `vite.config.ts`; no impidió compilar.
 - **Git:** repositorio local en rama `main`, identidad de este repositorio `Maxilodent <maxilodent@gmail.com>`. `main` está publicada en `https://github.com/maxilodent/pagina-web-maxilodent` y sigue `origin/main`.
 - **Vista previa:** servidor local activo. La revisión visual automatizada no se completó porque el control del navegador no pudo verificar la URL.
-- **Publicación del código:** `main` subida al repositorio público de GitHub. GitHub Pages se está configurando para publicar en `https://maxilodent.github.io/pagina-web-maxilodent/`.
-- **Demostración:** el usuario confirmó que los registros de `src/data/mockStudies.ts` son ficticios y autorizó publicarlos. La vista se etiqueta ahora como demostración y aclara que no representa pacientes reales.
+- **Publicación:** landing publicada en [GitHub Pages](https://maxilodent.github.io/pagina-web-maxilodent/). La ejecución `Publicar landing en GitHub Pages` finalizó en `success`.
+- **Verificación en línea:** página, JavaScript y CSS respondieron HTTP `200`; se comprobó que el bundle contiene la etiqueta de datos ficticios.
+- **Demostración:** el usuario confirmó que los registros de `src/data/mockStudies.ts` son ficticios y autorizó publicarlos. La vista se etiqueta como demostración y aclara que no representa pacientes reales.
 
 ## Flujo visible
 La landing ofrece una selección entre odontólogos y pacientes, servicios, acceso a un portal externo, formulario de orden que abre WhatsApp y un botón flotante de WhatsApp. La ruta exacta de orden aún requiere prueba funcional; no se envió ningún mensaje.
 
 ## Siguiente paso
-Completar y comprobar la primera publicación de GitHub Pages. Ver [[pendientes]].
+Revisar la landing publicada en escritorio y móvil cuando se disponga de navegador, y validar las afirmaciones comerciales pendientes en [[pendientes]].
 
 Ver [[empresa]], [[documentos-y-activos]] y [[pendientes]].

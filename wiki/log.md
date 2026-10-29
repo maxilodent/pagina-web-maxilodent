@@ -37,3 +37,4 @@ fuentes: ["AGENTS.md", "wiki/"]
 - Se confirmó que el repositorio es público y que Pages no está habilitado. La revisión del portal de demostración encontró nombres, identificadores y descripciones de salud sin confirmación de que sean ficticios; algunos ya están en el historial remoto.
 - No se activó Pages ni se subió el nuevo workflow. Publicación pendiente de resolver esos datos sensibles aparentes y el historial remoto.
 - El usuario confirmó que los datos del portal son ficticios y autorizó publicarlos. Se aclaró la etiqueta de demostración en el modal, se concedió solo `pages: read` al job de compilación y se continuó la preparación para Pages.
+- GitHub Pages se habilitó en el repositorio y el workflow `Publicar landing en GitHub Pages` terminó con `success`. Verificación HTTP de la URL pública, bundle JS y CSS: todos respondieron `200`; el bundle contiene la etiqueta de muestra ficticia. URL: `https://maxilodent.github.io/pagina-web-maxilodent/`.
