@@ -1,15 +1,9 @@
 import React from 'react';
+import { OFFICIAL_PORTAL_URL } from '../constants';
 
-interface PatientGuideSectionProps {
-  onOpenPortal: () => void;
-  onOpenOrder: () => void;
-}
-
-export const PatientGuideSection: React.FC<PatientGuideSectionProps> = ({
-  onOpenPortal,
-}) => {
+export const PatientGuideSection: React.FC<{ animate?: boolean }> = ({ animate = false }) => {
   return (
-    <section className="w-full bg-[#FFFFFF] py-14 border-y border-[#E4ECEC] animate-fadeIn">
+    <section className={`w-full bg-[#FFFFFF] py-14 border-y border-[#E4ECEC] ${animate ? 'soft-enter' : ''}`}>
       <div className="w-full max-w-[1440px] mx-auto px-4 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs uppercase tracking-widest text-[#CA5B30] font-bold">
@@ -64,20 +58,20 @@ export const PatientGuideSection: React.FC<PatientGuideSectionProps> = ({
               <div className="w-12 h-12 rounded-xl bg-[#84BAB9]/20 text-[#188C8E] flex items-center justify-center mb-4">
                 <span className="material-symbols-outlined text-[28px]">cloud_download</span>
               </div>
-              <h3 className="font-bold text-base text-[#243638] mb-2">Tus resultados en línea</h3>
+              <h3 className="font-bold text-base text-[#243638] mb-2">Entrega de estudios</h3>
               <p className="text-xs text-[#5A7173] leading-relaxed">
-                No tienes que volver a reclamar placas físicas. Ingresa a "Mis Radiografías" con tu número de documento y descárgalas para tu odontólogo.
+                La tomografía (cortes y resultado) se envía directamente a tu doctor; tu doctor consulta la radiografía en el portal oficial Mis Radiografías.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-[#E4ECEC]">
               <a
-                href="https://sistema.maxilodentrx.com/accounts/login/?next=/"
+                href={OFFICIAL_PORTAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 rounded-lg bg-[#126F72] hover:bg-[#0E5B5E] text-white font-bold text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm"
               >
                 <span className="material-symbols-outlined text-[16px]">search</span>
-                <span>Buscar mis resultados en Mis Radiografías</span>
+                <span>Abrir portal Mis Radiografías</span>
               </a>
             </div>
           </div>

@@ -8,19 +8,19 @@ export const TrustBar: React.FC = () => {
       desc: 'Confianza diagnóstica en Valledupar',
     },
     {
-      icon: 'schedule',
-      title: 'Cone Beam en 24 horas',
-      desc: 'Tiempos récord con informe clínico',
+      icon: 'view_in_ar',
+      title: 'Tomografía Cone Beam 3D',
+      desc: 'Estudio de imagen maxilofacial',
     },
     {
-      icon: 'bolt',
-      title: 'Otros estudios',
-      desc: 'Entrega inmediata para tu consulta',
+      icon: 'radiology',
+      title: 'Radiografías',
+      desc: 'Consulta los estudios disponibles',
     },
     {
-      icon: 'cloud_sync',
-      title: 'Resultados en la app',
-      desc: 'Visor DICOM y STL 24/7 en línea',
+      icon: 'folder_shared',
+      title: 'Portal Mis Radiografías',
+      desc: 'Acceso al portal oficial',
     },
   ];
 

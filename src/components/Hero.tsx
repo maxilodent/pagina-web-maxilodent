@@ -1,15 +1,16 @@
 import React from 'react';
 import { UserAudience } from '../types';
+import { OFFICIAL_PORTAL_URL } from '../constants';
 
 interface HeroProps {
   audience: UserAudience;
-  onOpenPortal: () => void;
+  animateAudienceChange: boolean;
   onRemitClick: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   audience,
-  onOpenPortal,
+  animateAudienceChange,
   onRemitClick,
 }) => {
   return (
@@ -22,24 +23,26 @@ export const Hero: React.FC<HeroProps> = ({
         
         {/* Left Column: Text & Primary CTAs (Col 1-7) */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E4ECEC] shadow-xs w-fit">
-            <span className="w-2 h-2 rounded-full bg-[#CA5B30] animate-pulse" />
-            <span className="text-xs uppercase tracking-wider text-[#188C8E] font-bold">
-              {audience === 'doctor'
-                ? 'Portal Exclusivo Odontólogos & Clínicas'
-                : 'Centro de Diagnóstico para Pacientes • Valledupar'}
-            </span>
-          </div>
+          <div key={audience} className={`${animateAudienceChange ? 'soft-enter' : ''} flex flex-col gap-6`}>
+          {audience === 'patient' && (
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E4ECEC] shadow-xs w-fit">
+              <span className="w-2 h-2 rounded-full bg-[#CA5B30] animate-pulse" />
+              <span className="text-xs uppercase tracking-wider text-[#188C8E] font-bold">
+                Centro de Diagnóstico para Pacientes • Valledupar
+              </span>
+            </div>
+          )}
 
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#243638] tracking-tight leading-[1.12]">
-            Tomografía <span className="text-[#188C8E] font-extrabold">Cone Beam</span> en 24 horas y tus resultados en tu pantalla
+            Diagnóstico por imágenes para odontología y pacientes
           </h1>
 
           <p className="text-base sm:text-lg text-[#5A7173] max-w-2xl leading-relaxed">
             {audience === 'doctor'
-              ? 'Imágenes dentales con calidad para odontólogos y clínicas en Valledupar. Desde 2008.'
-              : 'Estudios radiográficos y tomográficos de máxima nitidez con mínima radiación. Recibe tus resultados directamente en tu celular o descárgalos con tu documento.'}
+              ? 'Servicios de diagnóstico oral y maxilofacial para odontólogos y clínicas.'
+              : 'Conoce los servicios de diagnóstico oral y maxilofacial disponibles para pacientes.'}
           </p>
+          </div>
 
           {/* CTA Cluster */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -52,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({
             </button>
 
             <a
-              href="https://sistema.maxilodentrx.com/accounts/login/?next=/"
+              href={OFFICIAL_PORTAL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-[#188C8E] text-[#126F72] hover:bg-[#188C8E]/10 font-display text-sm sm:text-base font-semibold transition-all duration-200 bg-[#FFFFFF]"
@@ -62,31 +65,19 @@ export const Hero: React.FC<HeroProps> = ({
             </a>
           </div>
 
-          {/* Micro stats footer in hero */}
-          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#E4ECEC] max-w-xl">
-            <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-[#188C8E]">16+</div>
-              <div className="text-[11px] sm:text-xs text-[#5A7173] uppercase tracking-wide">Años de Trayectoria</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-[#CA5B30]">24h</div>
-              <div className="text-[11px] sm:text-xs text-[#5A7173] uppercase tracking-wide">Entrega CBCT 3D</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-[#243638]">100%</div>
-              <div className="text-[11px] sm:text-xs text-[#5A7173] uppercase tracking-wide">Digital en la Nube</div>
-            </div>
-          </div>
         </div>
 
         {/* Right Column: Hero Visual (Col 8-12) */}
         <div className="lg:col-span-5 relative">
           <div className="relative rounded-2xl p-2 bg-[#FFFFFF] border border-[#E4ECEC] shadow-[0_12px_32px_-4px_rgba(36,54,56,0.1)]">
-            <div className="relative rounded-xl overflow-hidden bg-[#F0F4F4]">
+            <div className="relative aspect-[5/4] rounded-xl overflow-hidden bg-[#F0F4F4] sm:aspect-auto sm:h-[460px]">
               <img
-                className="w-full h-[400px] sm:h-[460px] object-cover object-center"
-                alt="Toma tomográfica y radiológica con paciente en Maxilodent Valledupar"
+                className="h-full w-full object-cover object-center"
+                alt="Profesional de Maxilodent posiciona a un paciente frente al equipo de radiografía"
                 src={`${import.meta.env.BASE_URL}assets/aistudio/2_034ad018.jpeg`}
+                width={1280}
+                height={853}
+                fetchPriority="high"
               />
               
               {/* Radiologist Verification Chip */}

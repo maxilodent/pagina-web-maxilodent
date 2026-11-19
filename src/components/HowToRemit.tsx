@@ -1,13 +1,12 @@
 import React from 'react';
+import { OFFICIAL_PORTAL_URL } from '../constants';
 
 interface HowToRemitProps {
   onFillOrderClick: () => void;
-  onOpenPortalClick: () => void;
 }
 
 export const HowToRemit: React.FC<HowToRemitProps> = ({
   onFillOrderClick,
-  onOpenPortalClick,
 }) => {
   return (
     <section className="w-full bg-[#FFFFFF] py-16 border-t border-[#E4ECEC]" id="como-remitir">
@@ -64,7 +63,7 @@ export const HowToRemit: React.FC<HowToRemitProps> = ({
 
           {/* Step 3 */}
           <a
-            href="https://sistema.maxilodentrx.com/accounts/login/?next=/"
+            href={OFFICIAL_PORTAL_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer relative p-6 sm:p-8 rounded-2xl bg-[#F6F8F8] border border-[#E4ECEC] hover:border-[#188C8E] hover:bg-[#FFFFFF] hover:shadow-md transition-all group block"
@@ -73,14 +72,14 @@ export const HowToRemit: React.FC<HowToRemitProps> = ({
               03
             </div>
             <h3 className="font-display text-lg sm:text-xl font-bold text-[#243638] mb-2">
-              Ves el resultado en la app Mis Radiografías
+              Consulta el portal oficial Mis Radiografías
             </h3>
             <p className="text-xs sm:text-sm text-[#5A7173] leading-relaxed">
-              Descarga en línea inmediata para ti y tu clínica: DICOM completo, visores 3D y reportes radiológicos.
+              La tomografía (cortes y resultado) se envía directamente a tu doctor; tu doctor consulta la radiografía en el portal oficial Mis Radiografías.
             </p>
             <div className="mt-6 flex items-center gap-1.5 text-[#188C8E] text-xs font-semibold">
               <span className="material-symbols-outlined text-[18px]">devices</span>
-              <span>Acceso web y móvil seguro (sistema.maxilodentrx.com)</span>
+              <span>Portal oficial de Maxilodent</span>
             </div>
           </a>
         </div>

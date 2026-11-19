@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
+import { OFFICIAL_PORTAL_URL } from '../constants';
 
 export const FaqSection: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   const faqs = [
     {
-      q: '¿En cuánto tiempo recibo una tomografía?',
-      a: 'En 24 horas hábiles. Incluye reconstrucción tridimensional, cortes multiplanares (axial, coronal, sagital) y lectura diagnóstica firmada por odontólogo especialista en radiología oral.',
+      q: '¿Cuáles son los tiempos de entrega de los estudios?',
+      a: 'Las tomografías con lectura se entregan en 24 horas y las radiografías de forma inmediata. La tomografía (cortes y resultado) se envía directamente a tu doctor; tu doctor consulta la radiografía en el portal oficial «Mis Radiografías».',
     },
     {
-      q: '¿Y los demás estudios?',
-      a: 'Se entregan de inmediato. Las radiografías panorámicas, cefalométricas con trazado digital, periapicales y escaneos intraorales se cargan en la plataforma el mismo día de la toma.',
+      q: '¿Dónde consulta mi doctor las radiografías?',
+      a: 'Tu doctor consulta la radiografía en el portal oficial «Mis Radiografías».',
     },
     {
       q: '¿Cómo veo los resultados de mis pacientes?',
-      a: 'Ingresa al botón "Mis Radiografías" con el número de documento del paciente o tu código de clínica adscrita para acceder al visor DICOM web interactivo sin instalar ningún programa.',
+      a: 'Usa el acceso a «Mis Radiografías» para abrir el portal oficial. Si necesitas ayuda para ingresar o consultar un estudio, comunícate con tu odontólogo o con Maxilodent.',
     },
     {
       q: '¿Cómo obtengo mi acceso como odontólogo o clínica?',
@@ -76,13 +77,13 @@ export const FaqSection: React.FC = () => {
                     {idx === 2 && (
                       <div className="mt-3">
                         <a
-                          href="https://sistema.maxilodentrx.com/accounts/login/?next=/"
+                          href={OFFICIAL_PORTAL_URL}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#126F72] text-white font-bold text-xs hover:bg-[#0E5B5E] transition-colors"
                         >
                           <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-                          <span>Abrir sistema.maxilodentrx.com</span>
+                          <span>Abrir portal oficial Mis Radiografías</span>
                         </a>
                       </div>
                     )}

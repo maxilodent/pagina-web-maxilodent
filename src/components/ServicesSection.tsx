@@ -2,190 +2,105 @@ import React from 'react';
 import { ServiceDetail } from './ServiceDetailModal';
 
 export const SERVICES_DATA: ServiceDetail[] = [
-  {
-    id: 'cbct-3d',
-    title: 'Tomografía Cone Beam 3D',
-    subtitle: 'CBCT de alta resolución volumétrica',
-    icon: 'view_in_ar',
-    turnaroundTime: '24 horas con informe especializado',
-    description: 'Tomografía de haz cónico volumétrico con mínima dosis de radiación y cortes axiales continuos sin distorsión. Ideal para implantología guiada, endodoncia compleja, cirugía ortognática y valoración de ATM.',
-    indications: [
-      'Planeación de implantes y evaluación de densidad ósea',
-      'Localización de dientes retenidos (caninos, cordales)',
-      'Relación de ápices con el conducto dentario inferior y seno maxilar',
-      'Diagnóstico de patologías quísticas y fracturas alveolares',
-    ],
-    formats: ['DICOM estándar', 'Reconstrucción 3D STL', 'Informe PDF con lectura radiológica'],
-    fovOrSpecs: 'Campos de visión (FOV): 5x5, 8x8, 8x15 y 13x15 cm • Vóxel desde 85 µm',
-  },
-  {
-    id: 'panoramica-cefalo',
-    title: 'Panorámica y cefalométrica',
-    subtitle: 'Ortopantomografía y telerradiografía lateral',
-    icon: 'panorama',
-    turnaroundTime: 'Entrega inmediata en consulta',
-    description: 'Visión completa y continua de ambos maxilares, senos maxilares y articulaciones temporomandibulares en una sola exposición nítida y calibrada.',
-    indications: [
-      'Diagnóstico general y cribado odontológico inicial',
-      'Análisis cefalométrico digital (Steiner, Ricketts, McNamara)',
-      'Control de erupción dental y cronología dentaria',
-      'Evaluación ortodóntica previa al inicio del tratamiento',
-    ],
-    formats: ['JPEG HD', 'TIFF sin compresión', 'Trazado cefalométrico digital PDF'],
-    fovOrSpecs: 'Sensor CMOS de alta sensibilidad con tecnología ClinicView',
-  },
-  {
-    id: 'intraorales',
-    title: 'Radiografías intraorales',
-    subtitle: 'Periapical, coronal y oclusal digital',
-    icon: 'grid_view',
-    turnaroundTime: 'Entrega inmediata',
-    description: 'Tomas radiográficas de alta definición con colimador rectangular para evaluar con exactitud la cresta ósea alveolar, coronas, cámaras pulpares y ápices dentales.',
-    indications: [
-      'Detección precoz de caries interproximales (Bite Wing)',
-      'Seguimiento endodóntico y conductometría',
-      'Evaluación periodontal y pérdida ósea vertical/horizontal',
-      'Dientes supernumerarios y odontomas retenidos',
-    ],
-    formats: ['Digital inmediata por correo y WhatsApp', 'Visualización en la nube'],
-    fovOrSpecs: 'Sensores intraorales número 1 y 2 con posicionadores Rinn',
-  },
-  {
-    id: 'escaner-intraoral',
-    title: 'Escáner intraoral',
-    subtitle: 'Modelos digitales 3D STL/PLY',
-    icon: 'qr_code_scanner',
-    turnaroundTime: 'Descarga en la nube el mismo día',
-    description: 'Impresión digital óptica sin cubetas ni masas de alginato. Captura de alta precisión del arco superior, inferior y registro de mordida en oclusión céntrica.',
-    indications: [
-      'Alineadores invisibles y ortodoncia digital',
-      'Diseño de sonrisa y mock-up virtual',
-      'Coronas, puentes y carillas en flujo CAD/CAM',
-      'Archivos STL para impresión 3D de modelos de trabajo',
-    ],
-    formats: ['STL abierto', 'PLY a color', 'OBJ compatible con Exocad y 3Shape'],
-    fovOrSpecs: 'Escaneo óptico continuo sin polvo ni distorsiones térmicas',
-  },
-  {
-    id: 'estudios-implantes',
-    title: 'Estudios virtuales e implantes',
-    subtitle: 'Simulación protésica y quirúrgica',
-    icon: 'biotech',
-    turnaroundTime: '24 a 48 horas',
-    description: 'Integración del archivo tomográfico DICOM con el escaneo intraoral STL para diseñar férulas y guías quirúrgicas de precisión milimétrica.',
-    indications: [
-      'Cirugía guiada mínimamente invasiva',
-      'Evaluación de grosor de corticales y mucosa periimplantar',
-      'Posicionamiento tridimensional protésicamente guiado',
-      'Simulación de elevación de piso de seno maxilar',
-    ],
-    formats: ['Proyecto Nemotec / Exocad', 'Diseño de guía quirúrgica STL', 'Reporte milimétrico'],
-    fovOrSpecs: 'Software IN VIVO Anatomage y Nemotec Implant 3D',
-  },
-  {
-    id: 'paquetes-diagnosticos',
-    title: 'Paquetes diagnósticos',
-    subtitle: 'Protocolos integrales por especialidad',
-    icon: 'folder_special',
-    turnaroundTime: 'Entrega prioritaria',
-    description: 'Conjuntos completos de ayudas diagnósticas agrupados para facilitar el diagnóstico clínico, presentación de casos al paciente y presupuestos.',
-    indications: [
-      'Paquete Ortodoncia (Panorámica + Cefalométrica + Trazado + Fotos)',
-      'Paquete Cirugía de Cordales (CBCT Bimaxilar + Panorámica)',
-      'Paquete Periodoncia (Juego Periapical Completo + Panorámica)',
-      'Paquete Rehabilitación Oral (Escáner + Modelos + Fotografías)',
-    ],
-    formats: ['Carpeta digital completa', 'Acceso multi-archivo en Mis Radiografías'],
-    fovOrSpecs: 'Descuentos corporativos para clínicas y odontólogos adscritos',
-  },
+  { id: 'cone-beam-3d', title: 'Tomografía Cone Beam 3D', category: 'Tomografía', icon: 'view_in_ar', description: 'Estudio tomográfico Cone Beam en 3D.', image: `${import.meta.env.BASE_URL}assets/services/cone-beam-3d.jpeg`, imageAlt: 'Imagen de un estudio de tomografía Cone Beam 3D.' },
+  { id: 'panoramica', title: 'Radiografía panorámica', category: 'Radiografía extraoral', icon: 'panorama', description: 'Imagen radiográfica panorámica de la región maxilofacial.', image: `${import.meta.env.BASE_URL}assets/services/panoramica.jpeg`, imageAlt: 'Imagen de radiografía panorámica.' },
+  { id: 'perfil', title: 'Radiografía de perfil', category: 'Radiografía extraoral', icon: 'face', description: 'Radiografía extraoral de perfil.', image: `${import.meta.env.BASE_URL}assets/services/perfil.jpeg`, imageAlt: 'Imagen de radiografía de perfil.' },
+  { id: 'atm', title: 'Radiografía de ATM', category: 'Radiografía extraoral', icon: 'sensors', description: 'Estudio radiográfico de la articulación temporomandibular (ATM).', image: `${import.meta.env.BASE_URL}assets/services/atm.jpeg`, imageAlt: 'Imagen de radiografía de ATM.' },
+  { id: 'senos-paranasales', title: 'Radiografía de senos paranasales', category: 'Radiografía extraoral', icon: 'air', description: 'Radiografía extraoral de los senos paranasales.', image: `${import.meta.env.BASE_URL}assets/services/senos-paranasales.jpg`, imageAlt: 'Imagen de radiografía de senos paranasales.' },
+  { id: 'craneo-ap', title: 'Radiografía de cráneo AP', category: 'Radiografía extraoral', icon: 'patient_list', description: 'Radiografía de cráneo en proyección AP.', image: `${import.meta.env.BASE_URL}assets/services/craneo-ap.jpeg`, imageAlt: 'Imagen de radiografía de cráneo en proyección AP.' },
+  { id: 'craneo-pa', title: 'Radiografía de cráneo PA', category: 'Radiografía extraoral', icon: 'clinical_notes', description: 'Radiografía de cráneo en proyección PA.', image: `${import.meta.env.BASE_URL}assets/services/craneo-pa.jpg`, imageAlt: 'Imagen de radiografía de cráneo en proyección PA.' },
+  { id: 'carpograma', title: 'Carpograma', category: 'Radiografía extraoral', icon: 'back_hand', description: 'Estudio radiográfico de carpograma.', image: `${import.meta.env.BASE_URL}assets/services/carpograma.jpeg`, imageAlt: 'Imagen de radiografía de carpograma.' },
+  { id: 'periapical', title: 'Radiografía periapical', category: 'Radiografía intraoral', icon: 'dentistry', description: 'Radiografía intraoral periapical.', image: `${import.meta.env.BASE_URL}assets/services/periapical.jpg`, imageAlt: 'Imagen de radiografía intraoral periapical.' },
+  { id: 'oclusal', title: 'Radiografía oclusal', category: 'Radiografía intraoral', icon: 'grid_view', description: 'Radiografía intraoral oclusal.', image: `${import.meta.env.BASE_URL}assets/services/oclusal.webp`, imageAlt: 'Imagen de radiografía oclusal.' },
+  { id: 'coronal', title: 'Radiografía coronal', category: 'Radiografía intraoral', icon: 'view_column', description: 'Radiografía intraoral coronal.', image: `${import.meta.env.BASE_URL}assets/services/coronal.jpg`, imageAlt: 'Imagen de radiografía coronal.' },
+  { id: 'cefalometrico', title: 'Análisis cefalométrico computarizado', category: 'Análisis', icon: 'straighten', description: 'Análisis cefalométrico computarizado.', image: `${import.meta.env.BASE_URL}assets/services/cefalometrico.jpg`, imageAlt: 'Imagen de análisis cefalométrico.' },
+  { id: 'modelos-estudio', title: 'Modelos de estudio', category: 'Modelos', icon: 'model_training', description: 'Modelos de estudio.', image: `${import.meta.env.BASE_URL}assets/services/modelos.jpg`, imageAlt: 'Modelos dentales de estudio y trabajo.' },
+  { id: 'modelos-trabajo', title: 'Modelos de trabajo', category: 'Modelos', icon: 'architecture', description: 'Modelos de trabajo.', image: `${import.meta.env.BASE_URL}assets/services/modelos.jpg`, imageAlt: 'Modelos dentales de estudio y trabajo.' },
+  { id: 'modelos-virtuales', title: 'Modelos virtuales', category: 'Modelos', icon: 'deployed_code', description: 'Modelos virtuales.', image: `${import.meta.env.BASE_URL}assets/services/scanner-intraoral.png`, imageAlt: 'Modelo dental digital obtenido con escáner intraoral.' },
+  { id: 'estudios-virtuales', title: 'Estudios virtuales', category: 'Estudios', icon: 'web_asset', description: 'Estudios que se pueden enviar de forma virtual.' },
+  { id: 'paquete-ortodoncia', title: 'Paquete de diagnóstico de ortodoncia', category: 'Paquete diagnóstico', icon: 'folder_special', description: 'Paquete de diagnóstico con estudios como radiografías panorámica y de perfil.' },
+  { id: 'scanner-intraoral', title: 'Scanner intraoral', category: 'Escaneo', icon: 'qr_code_scanner', description: 'Escaneo intraoral.', image: `${import.meta.env.BASE_URL}assets/services/scanner-intraoral.png`, imageAlt: 'Vista de un modelo dental digital obtenido con escáner intraoral.' },
 ];
 
 interface ServicesSectionProps {
-  onSelectService: (service: ServiceDetail) => void;
+  onSelectService: (service: ServiceDetail, animate: boolean) => void;
   onRemitWithService: (serviceTitle: string) => void;
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({
   onSelectService,
   onRemitWithService,
-}) => {
-  return (
-    <section className="w-full max-w-[1440px] mx-auto px-4 lg:px-8 py-16" id="servicios">
-      {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div className="flex flex-col gap-1 max-w-2xl">
-          <span className="text-xs uppercase tracking-widest text-[#CA5B30] font-bold">
-            Portafolio Clínico
-          </span>
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#243638]">
-            Servicios Diagnósticos Especializados
-          </h2>
-          <p className="text-sm sm:text-base text-[#5A7173]">
-            Imágenes tomográficas y radiología oral calibradas para odontopediatría, implantología, cirugía maxilofacial y ortodoncia.
-          </p>
-        </div>
-        
-        <span className="text-xs text-[#126F72] font-semibold px-4 py-1.5 rounded-full bg-[#84BAB9]/20 border border-[#84BAB9]/40 w-fit">
-          Software DICOM compatible
-        </span>
-      </div>
+}) => (
+  <section className="w-full max-w-[1440px] mx-auto px-4 lg:px-8 py-16" id="servicios">
+    <div className="mb-9 max-w-3xl">
+      <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#243638]">
+        Servicios diagnósticos
+      </h2>
+      <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#5A7173]">
+        Consulta los estudios y servicios disponibles en Maxilodent.
+      </p>
+    </div>
 
-      {/* Grid 3x2 with pure white cards (#FFFFFF) and soft borders (#E4ECEC) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {SERVICES_DATA.map((service) => (
-          <div
-            key={service.id}
-            className="flex flex-col justify-between p-6 rounded-2xl bg-[#FFFFFF] border border-[#E4ECEC] hover:border-[#188C8E] hover:shadow-[0_8px_24px_-4px_rgba(36,54,56,0.08)] transition-all duration-200 group"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-14 h-14 rounded-xl bg-[#84BAB9]/20 text-[#188C8E] flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-[32px]">{service.icon}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => onSelectService(service)}
-                  className="text-xs text-[#188C8E] hover:underline flex items-center gap-1 font-semibold transition-opacity"
-                  title="Ver detalles e indicaciones clínicas"
-                >
-                  <span>Info clínica</span>
-                  <span className="material-symbols-outlined text-[16px]">info</span>
-                </button>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+      {SERVICES_DATA.map((service) => (
+        <li key={service.id}>
+          <article className="h-full flex flex-col rounded-2xl bg-white border border-[#E4ECEC] p-5 sm:p-6 transition-colors hover:border-[#84BAB9]">
+            {service.image && (
+              <div className="mb-5 aspect-[16/9] overflow-hidden rounded-xl bg-[#F0F6F5]">
+                <img
+                  src={service.image}
+                  alt={service.imageAlt ?? ''}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
               </div>
-
-              <h3 className="font-display text-lg sm:text-xl font-bold text-[#188C8E] mb-2">
-                {service.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#5A7173] mb-6 leading-relaxed">
-                {service.description.slice(0, 110)}...
-              </p>
+            )}
+            <div className="flex items-start justify-between gap-4">
+              <span className="inline-flex min-h-10 items-center rounded-full bg-[#F0F6F5] px-3 text-[11px] font-semibold tracking-wide text-[#126F72]">
+                {service.category}
+              </span>
+              <span aria-hidden="true" className="material-symbols-outlined text-2xl text-[#188C8E]">
+                {service.icon}
+              </span>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <h3 className="mt-5 font-display text-lg font-bold leading-snug text-[#243638]">
+              {service.title}
+            </h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-[#5A7173]">
+              {service.description}
+            </p>
+
+            <div className="mt-5 flex flex-col gap-2 border-t border-[#E4ECEC] pt-4">
               <a
-                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-[#126F72] text-white font-bold text-xs sm:text-sm hover:bg-[#0E5B5E] shadow-[0_2px_12px_rgba(18,111,114,0.2)] transition-all"
-                href={`https://wa.me/573135249123?text=${encodeURIComponent(
-                  `Hola Maxilodent, deseo solicitar el servicio de ${service.title}`
-                )}`}
+                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#126F72] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#0E5B5E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#126F72]"
+                href={`https://wa.me/573135249123?text=${encodeURIComponent(`Hola Maxilodent, deseo información sobre ${service.title}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined text-[18px]">chat</span>
-                <span>Pedir {service.title.split(' ')[0].toLowerCase()}</span>
+                <span className="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Consultar servicio</span>
               </a>
-
               <button
                 type="button"
                 onClick={() => onRemitWithService(service.title)}
-                className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg border border-[#E4ECEC] hover:border-[#188C8E] text-[#5A7173] hover:text-[#188C8E] text-xs font-semibold transition-all bg-[#F6F8F8]"
+                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#D5E3E2] px-4 py-2 text-sm font-semibold text-[#126F72] transition-colors hover:bg-[#F0F6F5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#126F72]"
               >
-                <span className="material-symbols-outlined text-[15px]">edit_note</span>
+                <span className="material-symbols-outlined text-lg" aria-hidden="true">edit_note</span>
                 <span>Incluir en orden virtual</span>
               </button>
+              <button
+                type="button"
+                onClick={(event) => onSelectService(service, event.detail > 0)}
+                className="self-start py-1 text-sm font-semibold text-[#126F72] underline underline-offset-4 hover:text-[#0E5B5E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#126F72]"
+              >
+                Ver descripción
+              </button>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+          </article>
+        </li>
+      ))}
+    </ul>
+  </section>
+);

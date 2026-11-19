@@ -16,13 +16,13 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onRemitClick }) => {
           <div className="max-w-2xl flex flex-col gap-2">
             <span className="text-xs uppercase tracking-widest text-[#E4ECEC] font-bold flex items-center justify-center lg:justify-start gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#CA5B30]" />
-              <span>Diagnóstico Digital Inmediato</span>
+              <span>Servicios de diagnóstico por imágenes</span>
             </span>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight">
               Remite a tu próximo paciente hoy
             </h2>
             <p className="text-sm sm:text-base text-[#E4ECEC] leading-relaxed">
-              Sin papeleos y con la mayor nitidez diagnóstica de Valledupar. Recibe tus estudios con lectura radiológica en 24 horas directamente en tu pantalla.
+              Consulta nuestros servicios de imagen dental. Si tienes dudas sobre la entrega de un estudio, comunícate con nuestro equipo.
             </p>
           </div>
 

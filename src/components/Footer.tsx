@@ -1,11 +1,15 @@
 import React from 'react';
+import {
+  OFFICIAL_FACEBOOK_URL,
+  OFFICIAL_INSTAGRAM_URL,
+  OFFICIAL_PORTAL_URL,
+} from '../constants';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
-  onOpenPortal: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPortal }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="w-full bg-[#FFFFFF] border-t border-[#E4ECEC] pt-16 pb-8">
       <div className="w-full max-w-[1440px] mx-auto px-4 lg:px-8">
@@ -74,30 +78,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPortal }) => {
               <div className="flex items-center gap-2">
                 <a
                   className="w-9 h-9 rounded-lg bg-[#F6F8F8] border border-[#E4ECEC] flex items-center justify-center text-[#188C8E] hover:bg-[#188C8E] hover:text-white transition-all"
-                  href="https://instagram.com"
+                  href={OFFICIAL_INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram oficial de Maxilodent"
                   title="Instagram"
                 >
                   <span className="material-symbols-outlined text-[20px]">photo_camera</span>
                 </a>
                 <a
                   className="w-9 h-9 rounded-lg bg-[#F6F8F8] border border-[#E4ECEC] flex items-center justify-center text-[#188C8E] hover:bg-[#188C8E] hover:text-white transition-all"
-                  href="https://facebook.com"
+                  href={OFFICIAL_FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook oficial de Maxilodent"
                   title="Facebook"
                 >
                   <span className="material-symbols-outlined text-[20px]">public</span>
-                </a>
-                <a
-                  className="w-9 h-9 rounded-lg bg-[#F6F8F8] border border-[#E4ECEC] flex items-center justify-center text-[#188C8E] hover:bg-[#188C8E] hover:text-white transition-all"
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                >
-                  <span className="material-symbols-outlined text-[20px]">business_center</span>
                 </a>
               </div>
             </div>
@@ -136,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPortal }) => {
             <span className="text-[#5A7173]">Resolución Seccional de Salud</span>
             <span className="text-[#188C8E]">•</span>
             <a
-              href="https://sistema.maxilodentrx.com/accounts/login/?next=/"
+              href={OFFICIAL_PORTAL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#188C8E] hover:underline font-semibold"
